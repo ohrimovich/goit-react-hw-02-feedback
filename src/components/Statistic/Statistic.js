@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 function Statistic({ good, neutral, bad, total, positivePercentage}) {
     
     return (
@@ -11,6 +13,15 @@ function Statistic({ good, neutral, bad, total, positivePercentage}) {
         <p>Positive feedbaks: { positivePercentage}%</p>
             </div>
     )
+}
+
+Statistic.protoTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.number.isRequired
+
 }
 
 export default Statistic;

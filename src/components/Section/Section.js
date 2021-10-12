@@ -1,7 +1,8 @@
 import React from "react";
 import Title from "../Title/Title";
+import PropTypes from "prop-types";
 
-function Section({text, children}) {
+function Section({ text, children }) {
     return (
     <section>
             <Title text={ text}/>
@@ -10,4 +11,7 @@ function Section({text, children}) {
  )
 }
 
+Section.propTypes = {
+    text: PropTypes.string.isRequired
+}
 export default Section;

@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import s from "./FeedbackOptions.module.scss";
+import PropTypes from "prop-types";
 
 function FeedbackOptions({options, onLeavefeedback}) {
     return (<div className={s.container}> {
@@ -8,6 +9,9 @@ function FeedbackOptions({options, onLeavefeedback}) {
     </div>
         )
 } 
-   
+FeedbackOptions.propTypes = {
+    options: PropTypes.array.isRequired,
+    onLeavefeedback: PropTypes.func
+   }
 export default FeedbackOptions;
    
